@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-    before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create]
+
   def index
     @posts = Post.all
   end
@@ -17,23 +18,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-
-    if @post.save
-      redirect_to @post
-    else
-      render "new"
-    end
+    post = current_user.posts.create(post_params)
+    redirect_to posts_path
   end
 
   def update
-    @post = Post.find(params[:id])
-
-    if @post.update(post_params)
-      redirect_to @post
-    else
-      render "edit"
-    end
+    post = Post.find_by_id(params[:id])
+    post.update(post_params)
+    redirect_to post_path
   end
 
   def destroy
