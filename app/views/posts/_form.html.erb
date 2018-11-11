@@ -1,4 +1,4 @@
-<%= form_with model: @post, local: true do |form| %>
+<%= form_for @post do |form| %>
 
   <p>
     <%= form.label :title %><br>
@@ -10,6 +10,11 @@
     <%= form.text_area :text %>
   </p>
  
+ <div>
+    <%= form.label :subject_ids, "What subject does this question relate to?" %>
+    <%= form.collection_check_boxes :subject_ids, Subject.all, :id, :name %>
+  </div>
+
   <p>
     <%= form.submit %>
   </p>
