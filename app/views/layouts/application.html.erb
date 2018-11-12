@@ -9,26 +9,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <header>
+<nav>
+<div class="nav-wrapper #cddc39 lime">
+      <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
 
   <% if user_signed_in? %>
   <% link_to users_path(current_user) %>
-  <p>You are logged in as:
-  <%= current_user.email %>
-   </p>  
-   <%= link_to "All Posts", posts_path %>
-   <%= link_to "Add a Post", new_post_path %>
-   <%= link_to "All Subjects", subjects_path %>
-   <%= link_to "View Profile", user_path(current_user) %>
-  <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-   <% else %> 
-   <%= link_to "All Posts", posts_path %>
-   <%= link_to "All Subjects", subjects_path %>
- <%= link_to 'Sign Up', new_user_registration_path %>
-   <%= link_to 'Log In', new_user_session_path %>
-   <% end %>   
 
-<p class="notice"><%= notice %></p>
+  <li><a href="sass.html"><%= link_to "All Posts", posts_path %>
+</a></li>
+        <li><a href="sass.html"><%= link_to "Add a Question", new_post_path %></a></li>
+        <li><a href="sass.html"><%= link_to "All Subjects", subjects_path %>
+</a></li>
+        <li><a href="sass.html"><%= link_to "View Profile", user_path(current_user) %>
+</a></li>
+        <li><a href="sass.html"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+</a></li>
+   <% else %> 
+        <li><a href="sass.html"><%= link_to "All Posts", posts_path %>
+</a></li>
+        <li><a href="sass.html"><%= link_to "All Subjects", subjects_path %>
+</a></li>
+        <li><a href="sass.html"><%= link_to 'Sign Up', new_user_registration_path %>
+</a></li>
+        <li><a href="sass.html"><%= link_to 'Log In', new_user_session_path %>
+</a></li>
+   <% end %>   
+   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+   </ul>
+    </div>
+  </nav>
+</header>
+
   <body>
     <%= yield %>
   </body>

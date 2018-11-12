@@ -13,3 +13,99 @@
  *= require_tree .
  *= require_self
  */
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: inherit;
+    width: auto;
+    margin: 8px;
+} 
+aside{ 
+    width: 250px;
+    margin: 0px 0px; 
+    display: inline;}
+
+label {
+    font-size: 14px;
+    color: black;
+}
+
+div.posts {
+    margin: 10px 90px; 
+    padding : 8px;
+    text-align: left;
+    width: 700px;
+}
+
+#post_title {
+    width: 70%;
+}
+
+#post_text {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.collection {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 5px;
+    width: 70%;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.subjects {
+padding: 8px 0;
+}
+
+h4 {
+    text-align: center;
+}
+
+.posts {
+    text-align: center;
+}
+
+.list {
+    text-align: left;
+    display : block;
+}
+
+.title {
+    padding: 15px 5px;
+    margin: 18px;
+}
+
+td.list {
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+div.container {
+    padding: 10px;
+    display: block;
+    width: 200px;  
+     
+}
+
+.flex {
+    display: flex;
+}
+
+div.content {
+    margin: 0px 0px; 
+    padding : 30px;
+    text-align: left;
+    width: 1000px;
+}

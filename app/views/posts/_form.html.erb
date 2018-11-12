@@ -1,17 +1,17 @@
 <%= form_for @post do |form| %>
-
+<div class = "content">
   <p>
-    <strong>What is your question? </strong><br>
+    <strong >What is your question? </strong><br>
     <%= form.text_field :title %>
   </p>
  
   <p>
-  <strong>Add More Description</strong>
+  <strong>Add More Description</strong><br>
     <%= form.text_area :text %>
   </p>
  
- <div>
-    <%= form.label :subject_ids, "What subject does this question relate to?" %>
+ <div class = "collection">
+   <strong> <%= form.label :subject_ids, "What subject does this question relate to?" %><strong><br>
     <%= form.collection_check_boxes :subject_ids, Subject.all, :id, :name %>
   </div>
 
@@ -20,3 +20,5 @@
   </p>
  
 <% end %>
+
+</div>
