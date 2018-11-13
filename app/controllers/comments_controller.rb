@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
+  def show 
+   @username = @comment.user.email.split("@")[0]
+  end 
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
@@ -15,6 +19,7 @@ class CommentsController < ApplicationController
   def destroy
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
+    @comment.destroy
     redirect_to post_path(@post)
   end
 

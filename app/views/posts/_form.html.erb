@@ -2,7 +2,7 @@
 <div class = "content">
   <p>
     <strong >What is your question? </strong><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, required: true %>
   </p>
  
   <p>
@@ -12,7 +12,7 @@
  
  <div class = "collection">
    <strong> <%= form.label :subject_ids, "What subject does this question relate to?" %><strong><br>
-    <%= form.collection_check_boxes :subject_ids, Subject.all, :id, :name %>
+    <%= form.collection_check_boxes :subject_ids, Subject.all, :id, :name, required: true %>
   </div>
 
   <p>

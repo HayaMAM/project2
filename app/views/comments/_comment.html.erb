@@ -7,11 +7,9 @@
             <p>
               <%= comment.body %>
                 </p>
-                  <% if @post.user %>
                   <p class = "user">
-                      by: <%= link_to @post.user.email, user_path(@post.user) %>
+                      by: <%= link_to @username, user_path(@post.user) %>
                     </p>
-                     <%end %>
                       <br>
                       <% if user_signed_in? && comment.user_id == current_user.id %>
                       <p>

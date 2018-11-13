@@ -180,3 +180,25 @@ font-family: 'Niramit', sans-serif;
 .title2 {
     text-align: left;
 }
+
+div.userpage {
+    padding: 10px 30px;
+    width: 50%;
+}
+
+em {
+    font-size: 14px;
+}
+
+label {
+    font-size: 16px;
+}
+
+div.field {
+    padding: 8px;
+}
+
+h5.title3 {
+    padding: 15px;
+    font-size: 30px;
+}

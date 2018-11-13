@@ -1,14 +1,16 @@
-
+<div class = "userpage">
+<p>
 <% if user_signed_in? %>
   <p>You are logged in as:
   <%= current_user.email %>
    </p>
   <% end %>
+  <%= cl_image_tag(current_user.image, :width => 70, :height => 70) %>
 
 <h5>My Questions</h5>
 <% @user.posts.each do |p| %>
   <p>
     <%= link_to(p.title, post_path(p)) %>
     <%end %>
-
-  </p><%= cl_image_tag current_user.image %>
+  </p>
+</div>
