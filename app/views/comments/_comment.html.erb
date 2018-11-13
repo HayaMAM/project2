@@ -1,25 +1,28 @@
-<% if @post.user %>
- <p>
-   Written by: <%= link_to @post.user.email, user_path(@post.user) %>
- </p>
- <%end %>
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
 
-<% if user_signed_in? && comment.user_id == current_user.id %>
 
-<p>
+ <div class="row">
+    <div class="col s12 m20">
+      <div class="card-content">
+        <span class="black-text">
+            <p>
+              <%= comment.body %>
+                </p>
+                  <% if @post.user %>
+                  <p class = "user">
+                      by: <%= link_to @post.user.email, user_path(@post.user) %>
+                    </p>
+                     <%end %>
+                      <br>
+                      <% if user_signed_in? && comment.user_id == current_user.id %>
+                      <p>
+                       <%= link_to 'Delete Comment', [comment.post, comment],
+                       method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+                   </p>
+                <% end %>
+          </span>
+        </div>
+    </div>
+</div>
 
-  <%= link_to 'Delete Comment', [comment.post, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
 
-<% end %>

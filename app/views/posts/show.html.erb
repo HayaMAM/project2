@@ -1,28 +1,36 @@
+<div class = "pshow"> 
 
-<% if @post.user %>
- <p>
-   Written by: <%= link_to @post.user.email, user_path(@post.user) %>
- </p>
- <%end %>
-<p>
-  <%= @post.title %>
-</p>
- 
-<p>
-  <%= @post.text %>
-</p>
+<div class="row">
+    <div class="col s12 m20">
+      <div class="card-content">
+        <span class="black-text">
+            <div class = "singlep">
+            <strong class = "font"> <%= @post.title %> </strong>
+              <p> <%= @post.text %> </p>
+                <% if @post.user %>
+                    <p class = "user">
+                      by: <%= link_to @post.user.email, user_path(@post.user) %>
+                        </p>
+                        <%end %>
 
-<% if user_signed_in? && @post.user_id == current_user.id %>
-        <%= link_to 'Edit', edit_post_path %>
-        <%= link_to 'Delete', post_path,
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-        <%end %>
+                          <% if user_signed_in? && @post.user_id == current_user.id %>
+                          <%= link_to 'Edit', edit_post_path %>
+                          <%= link_to 'Delete', post_path,
+                          method: :delete,
+                       data: { confirm: 'Are you sure?' } %>
+                      <%end %>
+
+                    </div>
+               </span>
+        </div>
+    </div>
+</div>
  
 <h6>Comments</h6>
+<div class = "singlec">
 <%= render @post.comments %>
- 
+</div>
+
 <h6>Add a comment:</h6>
 <%= render 'comments/form' %>
- 
- <%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path %>

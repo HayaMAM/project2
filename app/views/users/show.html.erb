@@ -1,4 +1,11 @@
-<h3>My Questions</h3>
+
+<% if user_signed_in? %>
+  <p>You are logged in as:
+  <%= current_user.email %>
+   </p>
+  <% end %>
+
+<h5>My Questions</h5>
 <% @user.posts.each do |p| %>
   <p>
     <%= link_to(p.title, post_path(p)) %>

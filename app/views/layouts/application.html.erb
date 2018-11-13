@@ -8,34 +8,27 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya|Niramit|Patua+One|Philosopher">
   </head>
+
   <header>
 <nav>
-<div class="nav-wrapper #cddc39 lime">
-      <a href="#" class="brand-logo">Logo</a>
+<div class="nav-wrapper #ffd600 yellow accent-4">
+      <a href= "#" class="brand-logo center"> <i class= "material-icons">lightbulb_outline</i>Enlight.me</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
 
   <% if user_signed_in? %>
   <% link_to users_path(current_user) %>
 
-  <li><a href="sass.html"><%= link_to "All Posts", posts_path %>
-</a></li>
+  <li><a href="sass.html"><%= link_to "All Posts", posts_path %></a></li>
         <li><a href="sass.html"><%= link_to "Add a Question", new_post_path %></a></li>
-        <li><a href="sass.html"><%= link_to "All Subjects", subjects_path %>
-</a></li>
-        <li><a href="sass.html"><%= link_to "View Profile", user_path(current_user) %>
-</a></li>
-        <li><a href="sass.html"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-</a></li>
+        <li><a href="sass.html"><%= link_to "View Profile", user_path(current_user) %></a></li>
+        <li><a href="sass.html"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></a></li>
    <% else %> 
-        <li><a href="sass.html"><%= link_to "All Posts", posts_path %>
-</a></li>
-        <li><a href="sass.html"><%= link_to "All Subjects", subjects_path %>
-</a></li>
-        <li><a href="sass.html"><%= link_to 'Sign Up', new_user_registration_path %>
-</a></li>
-        <li><a href="sass.html"><%= link_to 'Log In', new_user_session_path %>
-</a></li>
+        <li><a href="sass.html"><%= link_to "All Posts", posts_path %></a></li>
+        <li><a href="sass.html"><%= link_to 'Sign Up', new_user_registration_path %></a></li>
+        <li><a href="sass.html"><%= link_to 'Log In', new_user_session_path %></a></li>
    <% end %>   
    <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
