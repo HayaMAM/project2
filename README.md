@@ -1,24 +1,16 @@
-# README Modified 
+# Full-stack Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Used Technologies
+Ruby on Rails and CSS. 
 
-Things you may want to cover:
+## [Heroku Page](https://safe-harbor-88635.herokuapp.com/)
 
-* Ruby version
+## What’s Next
+* The ability of users to follow each others. 
+* The adding a username and an image next to the user. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Credits
+Special thanks to my instructors Jack Jeffres and Moath Althawad for their assistance and guidence throughout the project week. 
+* [Spark](https://spark.adobe.com/sp)
+* [Materialize](https://materializecss.com/)
+* [Google Fonts](https://fonts.google.com/)
