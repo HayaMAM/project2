@@ -10,7 +10,7 @@ Ruby on Rails and CSS.
 * The adding a username and an image next to the user. 
 
 ## Credits
-Special thanks to my instructors Jack Jeffres and Moath Althawad for their assistance and guidence throughout the project week. 
+Special thanks to my instructors Jack Jeffress and Moath Althawad for their assistance and guidence throughout the project week. 
 * [Spark](https://spark.adobe.com/sp)
 * [Materialize](https://materializecss.com/)
 * [Google Fonts](https://fonts.google.com/)
